@@ -1,35 +1,48 @@
 ---
+import {HTMLString} from "astro/dist/runtime/server";
 export interface Props {
-	title: string;
+  title: HTMLString
 }
-
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="google-site-verification" content="" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Karla:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:url" content="https://webkowski.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Piotr Łepkowski - Software Engineer" />
+    <meta property="og:description" content="Software developer with over 10 years of experience. I have a deep knowledge of various technologies and tools, proven track record of delivering successful projects. I am committed to creating high-quality software."/>
+    <meta property="og:image" content="/images/og-image.png" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8J7EG49QGS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8J7EG49QGS');
+  </script>
+	<body class="flex items-center justify-left h-screen w-screen font-main">
+    <slot />
+    <a
+        class="absolute bottom-0 right-0 m-4 text-xs text-gray-500"
+       title="This site uses cookies to provide you with a great user experience. By using this site, you accept our use of cookies."
+    >
+      This site uses cookies
+    </a>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

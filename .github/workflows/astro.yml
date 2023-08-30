@@ -57,7 +57,7 @@ jobs:
         with:
           node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: ${{ env.BUILD_PATH }}/yarn-lock.json
+          # cache-dependency-path: ${{ env.BUILD_PATH }}/yarn-lock.json
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
@@ -77,15 +77,16 @@ jobs:
 
   deploy:
     name: Deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           local-dir: ${{ env.BUILD_PATH }}/dist
-          server: ${{ secrets.ftp_server }}
-          username: ${{ secrets.ftp_name }}
-          password: ${{ secrets.ftp_password }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_NAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
     # environment:
     #   name: github-pages
     #   url: ${{ steps.deployment.outputs.page_url }}

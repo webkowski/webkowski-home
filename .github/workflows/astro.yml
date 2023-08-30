@@ -70,6 +70,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    environment: deployment
     steps:
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

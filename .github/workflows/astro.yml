@@ -32,6 +32,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    environment: deployment
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -65,13 +66,6 @@ jobs:
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
         working-directory: ${{ env.BUILD_PATH }}
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    environment: deployment
-    steps:
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:

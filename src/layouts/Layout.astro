@@ -24,8 +24,10 @@ const { title } = Astro.props;
     <meta property="og:url" content="https://webkowski.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Piotr Łepkowski - Software Engineer" />
-    <meta property="og:description" content="Software developer with over 10 years of experience. I have a deep knowledge of various technologies and tools, proven track record of delivering successful projects. I am committed to creating high-quality software."/>
+    <meta property="og:description" content="Software developer with over 15 years of experience. I have a deep knowledge of various technologies and tools, proven track record of delivering successful projects. I am committed to creating high-quality software."/>
     <meta property="og:image" content="/images/og-image.png" />
+    <meta name="description" content="Software developer with over 15 years of experience. I have a deep knowledge of various technologies and tools, proven track record of delivering successful projects. I am committed to creating high-quality software."/>
+
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8J7EG49QGS"></script>
@@ -38,11 +40,10 @@ const { title } = Astro.props;
   </script>
 	<body class="flex items-center justify-left min-h-screen relative py-5">
     <slot />
-    <a
-        class="absolute bottom-0 right-0 m-4 text-xs text-gray-500"
+    <div class="absolute bottom-0 right-0 m-4 text-xs text-gray-500"
        title="This site uses cookies to provide you with a great user experience. By using this site, you accept our use of cookies."
     >
       This site uses cookies
-    </a>
+    </div>
   </body>
 </html>

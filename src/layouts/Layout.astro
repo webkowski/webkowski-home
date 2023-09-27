@@ -17,10 +17,10 @@ const { title } = Astro.props;
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'unsafe-inline';
-      style-src 'unsafe-inline' https://fonts.googleapis.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       font-src 'self' https://fonts.gstatic.com data:;
       img-src 'self' data: https://www.google-analytics.com;
-      script-src-elem 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+      script-src-elem 'unsafe-inline' 'self' https://www.googletagmanager.com https://www.google-analytics.com;
       connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com;
     ">
     <title>{title}</title>

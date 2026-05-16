@@ -1,7 +1,7 @@
 ---
-import {HTMLString} from "astro/dist/runtime/server";
+import '../styles/global.css';
 export interface Props {
-  title: HTMLString
+  title: string;
 }
 const { title } = Astro.props;
 ---

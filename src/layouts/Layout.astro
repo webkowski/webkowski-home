@@ -96,7 +96,7 @@ const { title } = Astro.props;
           </div>
           <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-top:54px; padding-top:22px; border-top:1px solid var(--contact-line); font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--contact-dim);">
             <span>© 2026 Piotr Łepkowski · software engineer</span>
-            <span>this site uses cookies · <span data-clock>--:--:--</span></span>
+            <span>this site uses cookies</span>
           </div>
         </div>
       </div>
@@ -123,16 +123,6 @@ const { title } = Astro.props;
           try { localStorage.setItem('pl-theme', next); } catch (e) {}
           apply(next);
         });
-
-        // live clock
-        function p(n) { return String(n).padStart(2, '0'); }
-        function tick() {
-          var d = new Date();
-          var t = p(d.getHours()) + ':' + p(d.getMinutes()) + ':' + p(d.getSeconds());
-          document.querySelectorAll('[data-clock]').forEach(function (c) { if (c.textContent !== t) c.textContent = t; });
-        }
-        tick();
-        setInterval(tick, 1000);
 
         // scramble-on-hover
         var chars = '!<>-_\\/[]{}=+*^?#·:';

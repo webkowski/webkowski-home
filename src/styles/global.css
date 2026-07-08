@@ -1,5 +1,76 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Karla", sans-serif;
+  --font-sans: "Archivo", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
+
+/* ---- Design tokens (from Webkowski.dc) ---- */
+:root {
+  --bg: #f4f2ec; --card: #fbfaf7; --ink: #1b1916; --text: #3a362f; --text2: #4a463e; --body: #6b675f;
+  --muted: #8c887e; --muted2: #b6b2a8; --line: rgba(27, 25, 22, .12); --line14: rgba(27, 25, 22, .14);
+  --line18: rgba(27, 25, 22, .18); --line2: rgba(27, 25, 22, .2); --line40: rgba(27, 25, 22, .4);
+  --bracket: rgba(27, 25, 22, .22); --nav-bg: rgba(244, 242, 236, .82); --accent: #4b5bdd; --on-accent: #ffffff;
+  --shadow: rgba(27, 25, 22, .4); --contact-bg: #161412; --contact-text: #f4f2ec; --contact-muted: #bdb9af;
+  --contact-dim: #7d7a72; --contact-line: rgba(244, 242, 236, .14);
+}
+
+[data-theme="dark"] {
+  --bg: #14161b; --card: #1b1e25; --ink: #f4f5f7; --text: #c4c8d0; --text2: #b9bdc6; --body: #aab0bb;
+  --muted: #868c99; --muted2: #5a606c; --line: rgba(255, 255, 255, .10); --line14: rgba(255, 255, 255, .12);
+  --line18: rgba(255, 255, 255, .15); --line2: rgba(255, 255, 255, .16); --line40: rgba(255, 255, 255, .28);
+  --bracket: rgba(255, 255, 255, .22); --nav-bg: rgba(20, 22, 27, .82); --accent: #4f86ff; --on-accent: #0a0b0e;
+  --shadow: rgba(0, 0, 0, .55); --contact-bg: #0e1014; --contact-text: #e8e9ec; --contact-muted: #9aa0ab;
+  --contact-dim: #6b7280; --contact-line: rgba(255, 255, 255, .12);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Archivo', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .3s ease, color .3s ease;
+}
+::selection { background: var(--accent); color: var(--on-accent); }
+a { color: inherit; }
+
+@keyframes blink { 0%, 49% { opacity: 1 } 50%, 100% { opacity: 0 } }
+@keyframes pulse { 0%, 100% { opacity: 1 } 50% { opacity: .35 } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+
+/* ---- Hover behaviours (inline styles can't do :hover) ---- */
+.nav-link { transition: color .2s; cursor: pointer; }
+.nav-link:hover { color: var(--accent); }
+
+.btn-primary { transition: background .2s, filter .2s, transform .2s; }
+.btn-primary:hover { filter: brightness(1.08); transform: translateY(-2px); }
+
+.btn-ghost { transition: all .2s; }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+.link-accent { transition: color .2s; }
+.link-accent:hover { color: var(--accent); }
+
+.card { transition: transform .25s, border-color .25s, box-shadow .25s; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 14px 30px -18px var(--shadow); }
+
+.tag { transition: all .2s; cursor: default; }
+.tag:hover { border-color: var(--accent); color: var(--accent); }
+
+.email-btn { transition: transform .2s, background .2s; }
+.email-btn:hover { transform: translateY(-2px); background: #fff; color: #161412; }
+
+/* scroll offset so sticky nav doesn't cover anchors */
+[id] { scroll-margin-top: 80px; }
+
+/* ---- Accordion (projects page) ---- */
+.acc-body {
+  max-height: 0; opacity: 0; overflow: hidden;
+  transition: max-height .5s cubic-bezier(.2, .8, .2, 1), opacity .35s ease;
+}
+.acc-item.open .acc-body { max-height: 640px; opacity: 1; }
+.acc-sign::after { content: '+'; }
+.acc-item.open .acc-sign::after { content: '\2212'; }

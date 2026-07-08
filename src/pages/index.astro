@@ -2,164 +2,270 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="Piotr Łepkowski - Software Engineer">
-    <main class="lg:w-3/4 mx-[10%] lg:max-w-4xl text-slate-800 relative">
-        <article>
-            <section class="flex flex-col items-start gap-4">
-                <h1 class="text-4xl font-semibold leading-1">Piotr Łepkowski</h1>
-                <h2 class="text-2xl">Software engineer</h2>
-            </section>
-            <p class="text-2xl leading-tight mt-5">
-                Software developer with over 20 years of experience 👨‍💻, I have a deep
-                knowledge of various technologies and tools, proven track record of
-                delivering successful projects. I am committed to creating high-quality
-                software 🚀. Besides,&nbsp;I&nbsp;take&nbsp;<a
-                    href="https://subiektywny.com"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    class="text-purple-500 relative before:w-full before:h-7 before:absolute before:bottom-0 hover:before:bg-purple-500 z-0 hover:text-yellow-500 hover:before:-z-10"
-            >&nbsp;photos&nbsp;📸</a>.
-                <a href="/projects"
-                   class="flex w-fit text-purple-500 relative before:w-full before:h-7 before:absolute before:bottom-0 hover:before:bg-purple-500 z-0 hover:text-yellow-500 hover:before:-z-10"
-                >See the latest projects I co-created 🏆</a>
+  <div id="top" style="max-width:1080px; margin:0 auto; padding:0 32px;">
 
-            </p>
-        </article>
+    <!-- HERO -->
+    <section style="padding:58px 0 50px;">
+      <div style="display:flex; flex-wrap:wrap; gap:18px; align-items:center;">
+        <div style="flex:1 1 360px; min-width:330px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.9; color:var(--ink);"><span style="color:var(--accent);">➜</span> <span style="color:var(--muted);">~</span> whoami</div>
+          <h1 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(30px,4.2vw,50px); line-height:.98; letter-spacing:-1.5px; margin:6px 0 4px; white-space:nowrap;">Piotr Łepkowski<span style="color:var(--accent);">.</span></h1>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:16px; color:var(--accent); min-height:24px; margin:6px 0 20px;"><span id="role-text"></span><span style="display:inline-block; width:8px; height:15px; background:var(--accent); margin-left:3px; transform:translateY(2px); animation:blink 1s step-end infinite;"></span></div>
+          <p style="max-width:48ch; font-size:16.5px; line-height:1.62; color:var(--text); margin:0 0 28px;">Software developer with over 20 years of experience. Deep knowledge across the modern web stack and a proven track record of shipping successful products. Committed to high-quality, scalable software. Besides code, I take <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:3px;">photos</a>.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:14px; font-family:'JetBrains Mono',monospace; font-size:13px;">
+            <a href="/projects" class="btn-primary" style="background:var(--accent); color:var(--on-accent); border:none; padding:13px 22px; border-radius:3px; text-decoration:none; font-size:13px;">see_projects →</a>
+            <a href="#contact" class="btn-ghost" style="background:transparent; color:var(--ink); border:1px solid var(--line40); padding:13px 22px; border-radius:3px; text-decoration:none; font-size:13px;">let's_talk</a>
+            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent" style="display:inline-flex; align-items:center; padding:13px 4px; color:var(--muted); text-decoration:none;">photos ↗</a>
+          </div>
+        </div>
+        <div style="flex:1.5 1 420px; min-width:300px; display:flex; flex-direction:column; align-items:stretch; gap:10px;">
+          <canvas id="net-canvas" aria-hidden="true" style="width:100%; height:clamp(240px,32vh,340px);"></canvas>
+          <div id="net-stats" style="display:flex; flex-wrap:wrap; gap:16px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted);">
+            <span>epoch <span id="st-epoch" style="color:var(--ink);">0000</span></span>
+            <span>loss <span id="st-loss" style="color:var(--accent);">0.0000</span></span>
+            <span>acc <span id="st-acc" style="color:var(--accent);">0.0%</span></span>
+            <span>lr <span style="color:var(--ink);">3e-4</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="flex flex-col items-start gap-4">
-            <h2 class="mt-5 text-2xl">You have an idea, I'll help you make it happen.</h2>
-            <div class="mt-4 grid w-full gap-4 md:grid-cols-2 md:gap-4">
-                <div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">
+    <!-- SERVICES -->
+    <section id="services" style="padding:30px 0 18px;">
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:36px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--accent); font-weight:700;">01</span>
+        <span data-text="you have an idea, I'll help you make it happen" style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.5px; color:var(--ink); font-weight:500;">you have an idea, I'll help you make it happen</span>
+        <span style="flex:1; height:1px; background:var(--line14);"></span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">04 services</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
+        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:14px;">[ 01 ]</div>
+          <h3 style="margin:0 0 8px; font-size:21px; font-weight:700; letter-spacing:-.3px;">Web, SaaS &amp; Mobile Apps</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:var(--body);">Fast, scalable &amp; secure applications with modern architecture.</p>
+        </div>
+        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:14px;">[ 02 ]</div>
+          <h3 style="margin:0 0 8px; font-size:21px; font-weight:700; letter-spacing:-.3px;">React / Next.js</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:var(--body);">UI/UX development, application architecture, data visualization, services integration.</p>
+        </div>
+        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:14px;">[ 03 ]</div>
+          <h3 style="margin:0 0 8px; font-size:21px; font-weight:700; letter-spacing:-.3px;">Node.js</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:var(--body);">Web services, APIs, SDKs, third-party integrations.</p>
+        </div>
+        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:14px;">[ 04 ]</div>
+          <h3 style="margin:0 0 8px; font-size:21px; font-weight:700; letter-spacing:-.3px;">AI</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:var(--body);">LLM integrations, prompt engineering, agents, automation.</p>
+        </div>
+      </div>
+    </section>
 
-                    <h3 class="text-lg font-semibold">Web, SaaS &amp; Mobile Applications</h3>
-                    <p class="mt-1 text-md font-sans">Fast, scalable &amp; secure applications with modern
-                        architecture.</p>
-                </div>
-                <!--<div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">-->
+    <!-- SIDE PROJECTS -->
+    <section id="side" style="padding:54px 0 18px;">
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:36px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--accent); font-weight:700;">02</span>
+        <span data-text="side_projects" style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.5px; color:var(--ink); font-weight:500;">side_projects</span>
+        <span style="flex:1; height:1px; background:var(--line14);"></span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">building in public</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
 
-                <!--    <h3 class="text-lg font-semibold">WebDevelopment</h3>-->
-                <!--    <p class="mt-1 text-text-2">Fast, modern websites with great SEO that make your business grow.</p>-->
-                <!--</div>-->
+        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px; display:flex; gap:20px;">
+          <pre style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.15; margin:0; color:var(--accent); flex:none;"> .----.
+ |o  o|
+ | -- |
+ '----'</pre>
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;"><h3 style="margin:0; font-size:19px; font-weight:800;">MENTOR</h3><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); border:1px solid var(--line2); padding:2px 7px; border-radius:99px; white-space:nowrap;">early access</span></div>
+            <p style="margin:0; font-size:14px; line-height:1.6; color:var(--body);">AI mock-interview simulator. Parses job descriptions, generates role-specific questions, and scores answers in real time — competency breakdowns and hire-probability.</p>
+          </div>
+        </div>
 
-                <div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">
+        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px; display:flex; gap:20px;">
+          <pre style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.15; margin:0; color:var(--accent); flex:none;"> .----.
+ |&gt;_  |
+ |≡≡≡ |
+ '----'</pre>
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;"><h3 style="margin:0; font-size:19px; font-weight:800;">Stencil</h3><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--accent); border:1px solid var(--accent); padding:2px 7px; border-radius:99px; white-space:nowrap;">open source</span></div>
+            <p style="margin:0 0 8px; font-size:14px; line-height:1.6; color:var(--body);">VS Code extension that organizes, searches, and injects reusable AI prompts — with IDE context — into Copilot, Claude or any chat, without leaving your editor.</p>
+            <a href="https://github.com/ozrabal/stencil" target="_blank" rel="noopener noreferrer" class="link-accent" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink); text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:3px;">github.com/ozrabal/stencil ↗</a>
+          </div>
+        </div>
 
-                    <h3 class="text-lg font-semibold">React/Next.js Development</h3>
-                    <p class="mt-1 text-text-2">UI/UX development, application architecture, data visualization,
-                        services integration.</p></div>
+        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px; display:flex; gap:20px;">
+          <pre style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.15; margin:0; color:var(--accent); flex:none;"> .----.
+ |▤▤▤ |
+ |▤▤▤ |
+ '----'</pre>
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;"><h3 style="margin:0; font-size:19px; font-weight:800;">Muninn</h3><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); border:1px solid var(--line2); padding:2px 7px; border-radius:99px; white-space:nowrap;">early access</span></div>
+            <p style="margin:0; font-size:14px; line-height:1.6; color:var(--body);">Local-first Markdown library manager. Watches folders, classifies files with on-device embeddings, and builds a searchable private vault — zero cloud, zero manual tagging.</p>
+          </div>
+        </div>
 
-                <div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">
+        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px; display:flex; gap:20px;">
+          <pre style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.15; margin:0; color:var(--accent); flex:none;"> .----.
+ |┌┐  |
+ | └┘ |
+ '----'</pre>
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;"><h3 style="margin:0; font-size:19px; font-weight:800;">PlanMyApp</h3><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); border:1px solid var(--line2); padding:2px 7px; border-radius:99px; white-space:nowrap;">early access</span></div>
+            <p style="margin:0; font-size:14px; line-height:1.6; color:var(--body);">Planning tool for applications. Outline, design, and strategize app ideas efficiently with AI-powered insights and recommendations.</p>
+          </div>
+        </div>
 
-                    <h3 class="text-lg font-semibold">Node.js Development</h3>
-                    <p class="mt-1 text-text-2">Web services, APIs, SDKs, Third-Party Integrations.</p>
+      </div>
+      <div style="margin-top:16px; border:1px dashed var(--line2); border-radius:3px; padding:18px 24px; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:12px;">
+        <span style="color:var(--accent);">&gt;</span> more revolutionary ideas coming soon<span style="display:inline-block; width:8px; height:15px; background:var(--muted); animation:blink 1.1s step-end infinite;"></span>
+      </div>
+    </section>
 
-                </div>
-                <div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">
+    <div style="height:64px;"></div>
+  </div>
 
-                    <h3 class="text-lg font-semibold">AI</h3>
-                    <p class="mt-1 text-text-2">
-                        LLM integrations, prompt engineering, agents, automation.
-                    </p>
+  <!-- home behaviour: role typing + neural-net canvas -->
+  <script is:inline>
+    (function () {
+      // typed role
+      var role = 'software engineer · 20+ years';
+      var roleEl = document.getElementById('role-text');
+      var ri = 0;
+      setInterval(function () {
+        if (roleEl && ri < role.length) { ri++; roleEl.textContent = role.slice(0, ri); }
+      }, 90);
 
-                </div>
-            </div>
-             <h2 class="mt-5 text-2xl">Side projects:</h2>
-             <div class="mt-4 grid w-full gap-4 md:gap-4">
-               <div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">
-                 
-                 <h3 class="text-lg font-semibold">Mock interview simulator powered by AI. Built for ambitious candidates. 🤖</h3>
-                 <p class="mt-1 text-text-2">
-                  MENTOR parses job descriptions, generates role-specific interview questions, and evaluates candidate answers in real time — producing competency breakdowns and hire-probability scores to turn preparation into a data-driven process.
-                   <span
-                    class="text-purple-500 relative before:w-full before:h-7 before:absolute before:bottom-0 hover:before:bg-purple-500 z-0 hover:text-yellow-500 hover:before:-z-10"
-                  >Early access soon</span>
-               </div>
+      // neural network canvas
+      var net = null;
+      function initNet() {
+        var layers = [4, 6, 6, 4, 2];
+        var nodes = [], byLayer = [];
+        layers.forEach(function (count, li) {
+          var x = 0.07 + li * 0.86 / (layers.length - 1);
+          var ids = [];
+          for (var k = 0; k < count; k++) {
+            var y = count === 1 ? 0.5 : 0.08 + 0.84 * k / (count - 1);
+            ids.push(nodes.length); nodes.push({ x: x, y: y, layer: li, phase: Math.random() * 6.28 });
+          }
+          byLayer.push(ids);
+        });
+        var edges = [];
+        for (var li = 0; li < byLayer.length - 1; li++)
+          for (var ai = 0; ai < byLayer[li].length; ai++)
+            for (var bi = 0; bi < byLayer[li + 1].length; bi++) {
+              var on = Math.random() < 0.55;
+              edges.push({ a: byLayer[li][ai], b: byLayer[li + 1][bi], str: on ? 0.9 : 0, tgt: on ? 1 : 0 });
+            }
+        net = { layers: layers, byLayer: byLayer, nodes: nodes, edges: edges, pulses: [], last: performance.now(), dash: 0, t: 0, epoch: 0, tSpawn: 0, dispLoss: 0.7, dispAcc: 55 };
+      }
 
-              <div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">
-                 
-                 <h3 class="text-lg font-semibold">Prompt manager for AI-powered development. Keep your workflow in flow. ⚡</h3>
-                 <p class="mt-1 text-text-2">
-                  Stencil is a VS Code extension that organizes, searches, and injects your reusable AI prompts — with automatic IDE context — directly into Copilot, Claude, or any AI chat, without ever leaving your editor.
-                  </p>
-                   <a href="https://github.com/ozrabal/stencil"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-purple-500 relative before:w-full before:h-7 before:absolute before:bottom-0 hover:before:bg-purple-500 z-0 hover:text-yellow-500 hover:before:-z-10"
-                  >See, it is open source</a>
-               </div>
+      function drawNet(cv) {
+        if (!net) initNet();
+        var n = net;
+        var dpr = window.devicePixelRatio || 1;
+        var w = cv.clientWidth, h = cv.clientHeight;
+        if (!w || !h) return;
+        if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = w * dpr; cv.height = h * dpr; }
+        var ctx = cv.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, w, h);
 
-               <div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">
-                 
-                 <h3 class="text-lg font-semibold">Local-first Markdown library manager for AI-generated content. 🗄️</h3>
-                 <p class="mt-1 text-text-2">
-                  
-                  Muninn watches your folders, classifies every incoming file with on-device embeddings, and builds a fully searchable private vault — zero cloud, zero manual tagging, zero friction.
-                   <span
-                    class="text-purple-500 relative before:w-full before:h-7 before:absolute before:bottom-0 hover:before:bg-purple-500 z-0 hover:text-yellow-500 hover:before:-z-10"
-                  >Early access soon</span>
-               </div>
+        var now = performance.now();
+        var dt = Math.min(0.05, (now - n.last) / 1000); n.last = now;
+        n.t += dt;
+        for (var i = 0; i < n.nodes.length; i++) n.nodes[i].act = 0.5 + 0.5 * Math.sin(n.t * 0.32 + n.nodes[i].phase);
+        for (var e = 0; e < n.edges.length; e++) {
+          var ed = n.edges[e];
+          var prod = n.nodes[ed.a].act * n.nodes[ed.b].act;
+          ed.tgt = prod > 0.4 ? Math.min(1, (prod - 0.4) * 3.5) : 0;
+          ed.str += (ed.tgt - ed.str) * Math.min(1, dt * 0.5);
+        }
 
+        n.tSpawn -= dt;
+        if (n.tSpawn <= 0 && n.pulses.length < 7) {
+          n.tSpawn = 0.7 + Math.random() * 0.7;
+          var src = n.byLayer[0][(Math.random() * n.byLayer[0].length) | 0];
+          var outs = n.edges.filter(function (x) { return x.a === src && x.str > 0.5; });
+          if (outs.length) n.pulses.push({ edge: outs[(Math.random() * outs.length) | 0], t: 0, speed: 0.24 + Math.random() * 0.2 });
+        }
+        n.pulses = n.pulses.filter(function (p) {
+          p.t += dt * p.speed;
+          if (p.t >= 1) {
+            var arrive = p.edge.b;
+            var o = n.edges.filter(function (x) { return x.a === arrive && x.str > 0.5; });
+            if (o.length) { p.edge = o[(Math.random() * o.length) | 0]; p.t = 0; return true; }
+            n.epoch++;
+            return false;
+          }
+          return true;
+        });
+        n.dash -= dt * 4;
 
-               <div class="bg-slate-100 rounded-lg px-4 py-2 flex flex-col items-start gap-2">
-                 
-                 <h3 class="text-lg font-semibold">Planning tool for applications. With AI vibe 🤖.</h3>
-                 <p class="mt-1 text-text-2">
-                  PlanMyApp helps you outline, design, and strategize your app ideas efficiently using AI-powered insights and recommendations.
-                  </p>
-                   <!-- <a href="https://pmapp.pages.dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-purple-500 relative before:w-full before:h-7 before:absolute before:bottom-0 hover:before:bg-purple-500 z-0 hover:text-yellow-500 hover:before:-z-10"
-                  >Get early access</a> -->
-               </div>
+        var cs = getComputedStyle(document.documentElement);
+        var accent = (cs.getPropertyValue('--accent').trim()) || '#4b5bdd';
+        var muted = (cs.getPropertyValue('--muted').trim()) || '#8c887e';
+        var ink = (cs.getPropertyValue('--ink').trim()) || '#1b1916';
+        var pad = 12;
+        var P = function (nd) { return [pad + nd.x * (w - 2 * pad), pad + nd.y * (h - 2 * pad)]; };
 
-               <div class="rounded-lg py-2 flex flex-col items-start gap-2">
-                 <h3 class="text-lg font-semibold">More revolutionary ideas coming soon</h3>
-                 <p class="mt-1 text-text-2">
-                    Stay tuned for my more innovative projects that will change the way you live.
-                  </p>
-               </div>
-           </div>
+        ctx.lineWidth = 1; ctx.lineCap = 'round'; ctx.setLineDash([1.5, 5]); ctx.lineDashOffset = n.dash; ctx.strokeStyle = muted;
+        for (var e2 = 0; e2 < n.edges.length; e2++) {
+          var edg = n.edges[e2];
+          if (edg.str < 0.06) continue;
+          var pa = P(n.nodes[edg.a]), pb = P(n.nodes[edg.b]);
+          ctx.globalAlpha = edg.str * 0.42;
+          ctx.beginPath(); ctx.moveTo(pa[0], pa[1]); ctx.lineTo(pb[0], pb[1]); ctx.stroke();
+        }
+        ctx.setLineDash([]); ctx.globalAlpha = 1;
 
-        </section>
-        <aside class="mt-5 flex gap-2">
-            <a
-                    href="https://www.linkedin.com/in/lepkowski"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="LinkedIn"
-            >
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                >
-                    <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                            fill="#1e293b">
-                    </path>
-                </svg>
-            </a>
-            <a href="https://github.com/ozrabal"
-               rel="noopener noreferrer"
-               target="_blank"
-               title="Github"
-            >
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                >
-                    <path
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                            fill="#1e293b">
-                    </path>
-                </svg>
-            </a>
-            <a
-                    href="mailto:ozrabal+www@gmail.com"
-                    class="text-4sm relative before:w-full before:h-2 before:absolute before:bottom-0 hover:before:bg-amber-100 z-0 hover:before:-z-10"
-            >@let's talk</a>
-        </aside>
-    </main>
+        ctx.font = '8px "JetBrains Mono", monospace'; ctx.textBaseline = 'middle';
+        for (var nd2 = 0; nd2 < n.nodes.length; nd2++) {
+          var node = n.nodes[nd2];
+          var pp = P(node);
+          ctx.lineWidth = 1.3; ctx.strokeStyle = ink; ctx.globalAlpha = 0.5;
+          ctx.beginPath(); ctx.arc(pp[0], pp[1], 3, 0, 6.2832); ctx.stroke();
+          ctx.globalAlpha = 0.34; ctx.fillStyle = ink;
+          ctx.fillText(node.act.toFixed(2), pp[0] + 6, pp[1]);
+        }
+        ctx.globalAlpha = 1;
+
+        ctx.shadowColor = accent; ctx.fillStyle = accent;
+        for (var pi = 0; pi < n.pulses.length; pi++) {
+          var p2 = n.pulses[pi];
+          var A = n.nodes[p2.edge.a], B = n.nodes[p2.edge.b];
+          var av = P(A), bv = P(B);
+          var x = av[0] + (bv[0] - av[0]) * p2.t, y = av[1] + (bv[1] - av[1]) * p2.t;
+          ctx.shadowBlur = 10; ctx.globalAlpha = 1;
+          ctx.beginPath(); ctx.arc(x, y, 2.8, 0, 6.2832); ctx.fill();
+        }
+        ctx.shadowBlur = 0; ctx.globalAlpha = 1;
+
+        var strSum = 0, active = 0;
+        for (var e3 = 0; e3 < n.edges.length; e3++) { strSum += n.edges[e3].str; if (n.edges[e3].str > 0.5) active++; }
+        var conn = active / n.edges.length;
+        var targetLoss = Math.max(0.021, 0.95 - conn * 1.35);
+        var targetAcc = Math.min(99.4, 42 + conn * 92);
+        n.dispLoss += (targetLoss - n.dispLoss) * Math.min(1, dt * 0.6);
+        n.dispAcc += (targetAcc - n.dispAcc) * Math.min(1, dt * 0.6);
+        var set = function (id, val) { var el = document.getElementById(id); if (el && el.textContent !== val) el.textContent = val; };
+        set('st-epoch', String(n.epoch).padStart(4, '0'));
+        set('st-loss', n.dispLoss.toFixed(4));
+        set('st-acc', n.dispAcc.toFixed(1) + '%');
+        var legend = document.getElementById('net-stats');
+        if (legend) {
+          var bl = n.nodes[n.byLayer[0][n.byLayer[0].length - 1]];
+          legend.style.paddingLeft = Math.round(P(bl)[0]) + 'px';
+        }
+      }
+
+      function loop() {
+        requestAnimationFrame(loop);
+        var cv = document.getElementById('net-canvas');
+        if (cv) drawNet(cv);
+      }
+      loop();
+    })();
+  </script>
 </Layout>

@@ -10,7 +10,7 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="google-site-verification" content="" />
@@ -27,32 +27,134 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <meta property="og:url" content="https://webkowski.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Piotr Łepkowski - Software Engineer" />
-    <meta property="og:description" content="Software developer with over 15 years of experience. I have a deep knowledge of various technologies and tools, proven track record of delivering successful projects. I am committed to creating high-quality software."/>
+    <meta property="og:description" content="Software developer with over 20 years of experience. Deep knowledge across the modern web stack and a proven track record of shipping successful products. Committed to high-quality, scalable software."/>
     <meta property="og:image" content="/images/og-image.png" />
-    <meta name="description" content="Software developer with over 15 years of experience. I have a deep knowledge of various technologies and tools, proven track record of delivering successful projects. I am committed to creating high-quality software."/>
+    <meta name="description" content="Software developer with over 20 years of experience. Deep knowledge across the modern web stack and a proven track record of shipping successful products. Committed to high-quality, scalable software."/>
 
+    <!-- apply saved theme before paint to avoid flash -->
+    <script is:inline>
+      try { document.documentElement.setAttribute('data-theme', localStorage.getItem('pl-theme') || 'light'); } catch (e) {}
+    </script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8J7EG49QGS"></script>
-  <script>
+  <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-8J7EG49QGS');
   </script>
-	<body class="flex items-center justify-left min-h-screen relative py-5">
-    <slot />
-    <div class="absolute bottom-0 right-0 m-4 text-xs text-gray-500"
-       title="This site uses cookies to provide you with a great user experience. By using this site, you accept our use of cookies."
-    >
-      This site uses cookies
+  <body>
+    <div style="position:relative; min-height:100vh; overflow-x:hidden; background:var(--bg); color:var(--ink); transition:background-color .3s ease, color .3s ease;">
+
+      <!-- fixed corner brackets -->
+      <div style="position:fixed; top:10px; left:12px; font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--bracket); z-index:5; pointer-events:none;">┌</div>
+      <div style="position:fixed; top:10px; right:12px; font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--bracket); z-index:5; pointer-events:none;">┐</div>
+      <div style="position:fixed; bottom:10px; left:12px; font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--bracket); z-index:5; pointer-events:none;">└</div>
+      <div style="position:fixed; bottom:10px; right:12px; font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--bracket); z-index:5; pointer-events:none;">┘</div>
+
+      <!-- NAV -->
+      <div style="position:sticky; top:0; z-index:20; background:var(--nav-bg); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);">
+        <div style="max-width:1080px; margin:0 auto; padding:14px 32px; display:flex; align-items:center; gap:24px;">
+          <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none; user-select:none;">
+            <span style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; color:var(--on-accent); background:var(--accent); padding:5px 8px; border-radius:3px; letter-spacing:1px;">pł</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted);">webkowski.com</span>
+          </a>
+          <div style="flex:1;"></div>
+          <div style="display:flex; align-items:center; gap:22px; font-family:'JetBrains Mono',monospace; font-size:13px;">
+            <a href="/" class="nav-link" data-text="home" style="text-decoration:none;">home</a>
+            <a href="/#services" class="nav-link" data-text="work" style="text-decoration:none;">work</a>
+            <a href="/projects" class="nav-link" data-text="projects" style="text-decoration:none;">projects</a>
+            <a href="#contact" class="nav-link" data-text="contact" style="text-decoration:none;">contact</a>
+            <span id="theme-toggle" class="nav-link" style="color:var(--muted);"><span id="theme-label">☾ dark</span></span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted); border-left:1px solid var(--line); padding-left:18px;">
+            <span style="width:7px; height:7px; border-radius:50%; background:var(--accent); animation:pulse 1.8s ease-in-out infinite;"></span>
+            <span data-clock>--:--:--</span>
+          </div>
+        </div>
+      </div>
+
+      <slot />
+
+      <!-- CONTACT (dark band, shared) -->
+      <div id="contact" style="background:var(--contact-bg); color:var(--contact-text); margin-top:20px;">
+        <div style="max-width:1080px; margin:0 auto; padding:72px 32px 40px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:22px;">// let's build something</div>
+          <h2 data-text="let's talk." style="font-size:clamp(38px,7vw,80px); font-weight:900; letter-spacing:-2px; margin:0 0 30px; line-height:.95;">let's talk.</h2>
+          <a href="mailto:ozrabal+www@gmail.com" class="email-btn" style="display:inline-block; background:var(--accent); color:var(--on-accent); padding:15px 26px; border-radius:3px; font-family:'JetBrains Mono',monospace; font-size:14px; text-decoration:none;">ozrabal+www@gmail.com →</a>
+          <div style="display:flex; flex-wrap:wrap; gap:26px; margin-top:38px; font-family:'JetBrains Mono',monospace; font-size:13px;">
+            <a href="https://www.linkedin.com/in/lepkowski" target="_blank" rel="noopener noreferrer" class="link-accent" style="color:var(--contact-muted); text-decoration:none;">linkedin ↗</a>
+            <a href="https://github.com/ozrabal" target="_blank" rel="noopener noreferrer" class="link-accent" style="color:var(--contact-muted); text-decoration:none;">github ↗</a>
+            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent" style="color:var(--contact-muted); text-decoration:none;">photography ↗</a>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-top:54px; padding-top:22px; border-top:1px solid var(--contact-line); font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--contact-dim);">
+            <span>© 2026 Piotr Łepkowski · software engineer</span>
+            <span>this site uses cookies · <span data-clock>--:--:--</span></span>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <!-- shared behaviour: theme toggle, live clock, scramble-on-hover -->
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        function label(t) { return t === 'dark' ? '☀ light' : '☾ dark'; }
+        function apply(t) {
+          root.setAttribute('data-theme', t);
+          var l = document.getElementById('theme-label');
+          if (l) l.textContent = label(t);
+        }
+        var saved = 'light';
+        try { saved = localStorage.getItem('pl-theme') || 'light'; } catch (e) {}
+        apply(saved);
+        var btn = document.getElementById('theme-toggle');
+        if (btn) btn.addEventListener('click', function () {
+          var cur = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+          var next = cur === 'dark' ? 'light' : 'dark';
+          try { localStorage.setItem('pl-theme', next); } catch (e) {}
+          apply(next);
+        });
+
+        // live clock
+        function p(n) { return String(n).padStart(2, '0'); }
+        function tick() {
+          var d = new Date();
+          var t = p(d.getHours()) + ':' + p(d.getMinutes()) + ':' + p(d.getSeconds());
+          document.querySelectorAll('[data-clock]').forEach(function (c) { if (c.textContent !== t) c.textContent = t; });
+        }
+        tick();
+        setInterval(tick, 1000);
+
+        // scramble-on-hover
+        var chars = '!<>-_\\/[]{}=+*^?#·:';
+        document.querySelectorAll('[data-text]').forEach(function (el) {
+          el.addEventListener('mouseenter', function () {
+            var final = el.dataset.text;
+            if (!final) return;
+            var frame = 0;
+            clearInterval(el._iv);
+            el._iv = setInterval(function () {
+              var reveal = frame / 2, out = '';
+              for (var i = 0; i < final.length; i++) {
+                if (i < reveal || final[i] === ' ') out += final[i];
+                else out += chars[Math.floor(Math.random() * chars.length)];
+              }
+              el.textContent = out;
+              frame++;
+              if (reveal >= final.length) { clearInterval(el._iv); el.textContent = final; }
+            }, 26);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

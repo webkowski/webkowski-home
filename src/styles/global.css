@@ -3,6 +3,32 @@
 @theme {
   --font-sans: "Archivo", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  /* Alias the runtime design tokens (defined per-theme in :root / [data-theme])
+     into Tailwind's color namespace so utilities like `text-accent`, `bg-card`
+     and `border-line` resolve to the same variables and keep theme-switching. */
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-text: var(--text);
+  --color-text2: var(--text2);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-muted2: var(--muted2);
+  --color-line: var(--line);
+  --color-line14: var(--line14);
+  --color-line18: var(--line18);
+  --color-line2: var(--line2);
+  --color-line40: var(--line40);
+  --color-bracket: var(--bracket);
+  --color-nav-bg: var(--nav-bg);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-contact-bg: var(--contact-bg);
+  --color-contact-text: var(--contact-text);
+  --color-contact-muted: var(--contact-muted);
+  --color-contact-dim: var(--contact-dim);
+  --color-contact-line: var(--contact-line);
 }
 
 /* ---- Design tokens (from Webkowski.dc) ---- */

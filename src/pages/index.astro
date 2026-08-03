@@ -2,128 +2,128 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="Piotr Łepkowski - Software Engineer">
-  <div id="top" style="max-width:1080px; margin:0 auto; padding:0 32px;">
+  <div id="top" class="max-w-[1080px] mx-auto px-[32px]">
 
     <!-- HERO -->
-    <section style="padding:58px 0 50px;">
-      <div style="display:flex; flex-wrap:wrap; gap:18px; align-items:center;">
-        <div style="flex:1 1 360px; min-width:330px;">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.9; color:var(--ink);"><span style="color:var(--accent);">➜</span> <span style="color:var(--muted);">~</span> whoami</div>
-          <h1 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(30px,4.2vw,50px); line-height:.98; letter-spacing:-1.5px; margin:6px 0 4px; white-space:nowrap;">Piotr Łepkowski<span style="color:var(--accent);">.</span></h1>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:16px; color:var(--accent); min-height:24px; margin:6px 0 20px;"><span id="role-text"></span><span style="display:inline-block; width:8px; height:15px; background:var(--accent); margin-left:3px; transform:translateY(2px); animation:blink 1s step-end infinite;"></span></div>
-          <p style="max-width:48ch; font-size:16.5px; line-height:1.62; color:var(--text); margin:0 0 28px;">Software developer with over 15 years of experience. Deep knowledge across the modern web stack and a proven track record of shipping successful products. Committed to high-quality, scalable software. Besides code, I take <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" style="color:var(--ink); text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:3px;">photos</a>.</p>
-          <div style="display:flex; flex-wrap:wrap; gap:14px; font-family:'JetBrains Mono',monospace; font-size:13px;">
-            <a href="/projects" class="btn-primary" style="background:var(--accent); color:var(--on-accent); border:none; padding:13px 22px; border-radius:3px; text-decoration:none; font-size:13px;">see_projects →</a>
-            <a href="#contact" class="btn-ghost" style="background:transparent; color:var(--ink); border:1px solid var(--line40); padding:13px 22px; border-radius:3px; text-decoration:none; font-size:13px;">let's_talk</a>
-            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent" style="display:inline-flex; align-items:center; padding:13px 4px; color:var(--muted); text-decoration:none;">photos ↗</a>
+    <section class="pt-[58px] pb-[50px]">
+      <div class="flex flex-wrap gap-[18px] items-center">
+        <div class="flex-[1_1_360px] min-w-[330px]">
+          <div class="font-mono text-[14px] leading-[1.9] text-ink"><span class="text-accent">➜</span> <span class="text-muted">~</span> whoami</div>
+          <h1 class="font-sans font-extrabold text-[clamp(30px,4.2vw,50px)] leading-[.98] tracking-[-1.5px] mt-[6px] mx-0 mb-[4px] whitespace-nowrap">Piotr Łepkowski<span class="text-accent">.</span></h1>
+          <div class="font-mono text-[16px] text-accent min-h-[24px] mt-[6px] mx-0 mb-[20px]"><span id="role-text"></span><span class="inline-block w-[8px] h-[15px] bg-accent ml-[3px] translate-y-[2px] animate-[blink_1s_step-end_infinite]"></span></div>
+          <p class="max-w-[48ch] text-[16.5px] leading-[1.62] text-text mt-0 mx-0 mb-[28px]">Software developer with over 15 years of experience. Deep knowledge across the modern web stack and a proven track record of shipping successful products. Committed to high-quality, scalable software. Besides code, I take <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="text-ink underline decoration-accent underline-offset-[3px]">photos</a>.</p>
+          <div class="flex flex-wrap gap-[14px] font-mono text-[13px]">
+            <a href="/projects" class="btn-primary bg-accent text-on-accent border-none px-[22px] py-[13px] rounded-[3px] no-underline text-[13px]">see_projects →</a>
+            <a href="#contact" class="btn-ghost bg-transparent text-ink border border-line40 px-[22px] py-[13px] rounded-[3px] no-underline text-[13px]">let's_talk</a>
+            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent inline-flex items-center px-[4px] py-[13px] text-muted no-underline">photos ↗</a>
           </div>
         </div>
-        <div style="flex:1.5 1 420px; min-width:300px; display:flex; flex-direction:column; align-items:stretch; gap:10px;">
-          <canvas id="net-canvas" aria-hidden="true" style="width:100%; height:clamp(240px,32vh,340px);"></canvas>
-          <div id="net-stats" style="display:flex; flex-wrap:wrap; gap:16px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted);">
-            <span>epoch <span id="st-epoch" style="color:var(--ink);">0000</span></span>
-            <span>loss <span id="st-loss" style="color:var(--accent);">0.0000</span></span>
-            <span>acc <span id="st-acc" style="color:var(--accent);">0.0%</span></span>
-            <span>lr <span style="color:var(--ink);">3e-4</span></span>
+        <div class="flex-[1.5_1_420px] min-w-[300px] flex flex-col items-stretch gap-[10px]">
+          <canvas id="net-canvas" aria-hidden="true" class="w-full h-[clamp(240px,32vh,340px)]"></canvas>
+          <div id="net-stats" class="flex flex-wrap gap-[16px] font-mono text-[11px] text-muted">
+            <span>epoch <span id="st-epoch" class="text-ink">0000</span></span>
+            <span>loss <span id="st-loss" class="text-accent">0.0000</span></span>
+            <span>acc <span id="st-acc" class="text-accent">0.0%</span></span>
+            <span>lr <span class="text-ink">3e-4</span></span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" style="padding:30px 0 18px;">
-      <div style="display:flex; align-items:center; gap:16px; margin-bottom:36px;">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--accent); font-weight:700;">01</span>
-        <span data-text="you have an idea, I'll help you make it happen" style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.5px; color:var(--ink); font-weight:500;">you have an idea, I'll help you make it happen</span>
-        <span style="flex:1; height:1px; background:var(--line14);"></span>
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">04 services</span>
+    <section id="services" class="pt-[30px] pb-[18px]">
+      <div class="flex items-center gap-[16px] mb-[36px]">
+        <span class="font-mono text-[13px] text-accent font-bold">01</span>
+        <span data-text="you have an idea, I'll help you make it happen" class="font-mono text-[13px] tracking-[.5px] text-ink font-medium">you have an idea, I'll help you make it happen</span>
+        <span class="flex-1 h-px bg-line14"></span>
+        <span class="font-mono text-[12px] text-muted">04 services</span>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
-        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:14px;">[ 01 ]</div>
-          <h3 style="margin:0 0 8px; font-size:21px; font-weight:700; letter-spacing:-.3px;">Web, SaaS &amp; Mobile Apps</h3>
-          <p style="margin:0; font-size:14.5px; line-height:1.6; color:var(--body);">Fast, scalable &amp; secure applications with modern architecture.</p>
+      <div class="grid grid-cols-2 gap-[16px]">
+        <div class="card bg-card border border-line rounded-[3px] p-[26px]">
+          <div class="font-mono text-[12px] text-accent mb-[14px]">[ 01 ]</div>
+          <h3 class="mt-0 mx-0 mb-[8px] text-[21px] font-bold tracking-[-.3px]">Web, SaaS &amp; Mobile Apps</h3>
+          <p class="m-0 text-[14.5px] leading-[1.6] text-body">Fast, scalable &amp; secure applications with modern architecture.</p>
         </div>
-        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:14px;">[ 02 ]</div>
-          <h3 style="margin:0 0 8px; font-size:21px; font-weight:700; letter-spacing:-.3px;">React / Next.js</h3>
-          <p style="margin:0; font-size:14.5px; line-height:1.6; color:var(--body);">UI/UX development, application architecture, data visualization, services integration.</p>
+        <div class="card bg-card border border-line rounded-[3px] p-[26px]">
+          <div class="font-mono text-[12px] text-accent mb-[14px]">[ 02 ]</div>
+          <h3 class="mt-0 mx-0 mb-[8px] text-[21px] font-bold tracking-[-.3px]">React / Next.js</h3>
+          <p class="m-0 text-[14.5px] leading-[1.6] text-body">UI/UX development, application architecture, data visualization, services integration.</p>
         </div>
-        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:14px;">[ 03 ]</div>
-          <h3 style="margin:0 0 8px; font-size:21px; font-weight:700; letter-spacing:-.3px;">Node.js</h3>
-          <p style="margin:0; font-size:14.5px; line-height:1.6; color:var(--body);">Web services, APIs, SDKs, third-party integrations.</p>
+        <div class="card bg-card border border-line rounded-[3px] p-[26px]">
+          <div class="font-mono text-[12px] text-accent mb-[14px]">[ 03 ]</div>
+          <h3 class="mt-0 mx-0 mb-[8px] text-[21px] font-bold tracking-[-.3px]">Node.js</h3>
+          <p class="m-0 text-[14.5px] leading-[1.6] text-body">Web services, APIs, SDKs, third-party integrations.</p>
         </div>
-        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:14px;">[ 04 ]</div>
-          <h3 style="margin:0 0 8px; font-size:21px; font-weight:700; letter-spacing:-.3px;">AI</h3>
-          <p style="margin:0; font-size:14.5px; line-height:1.6; color:var(--body);">LLM integrations, prompt engineering, agents, automation.</p>
+        <div class="card bg-card border border-line rounded-[3px] p-[26px]">
+          <div class="font-mono text-[12px] text-accent mb-[14px]">[ 04 ]</div>
+          <h3 class="mt-0 mx-0 mb-[8px] text-[21px] font-bold tracking-[-.3px]">AI</h3>
+          <p class="m-0 text-[14.5px] leading-[1.6] text-body">LLM integrations, prompt engineering, agents, automation.</p>
         </div>
       </div>
     </section>
 
     <!-- SIDE PROJECTS -->
-    <section id="side" style="padding:54px 0 18px;">
-      <div style="display:flex; align-items:center; gap:16px; margin-bottom:36px;">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--accent); font-weight:700;">02</span>
-        <span data-text="side_projects" style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.5px; color:var(--ink); font-weight:500;">side_projects</span>
-        <span style="flex:1; height:1px; background:var(--line14);"></span>
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">building in public</span>
+    <section id="side" class="pt-[54px] pb-[18px]">
+      <div class="flex items-center gap-[16px] mb-[36px]">
+        <span class="font-mono text-[13px] text-accent font-bold">02</span>
+        <span data-text="side_projects" class="font-mono text-[13px] tracking-[.5px] text-ink font-medium">side_projects</span>
+        <span class="flex-1 h-px bg-line14"></span>
+        <span class="font-mono text-[12px] text-muted">building in public</span>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
+      <div class="grid grid-cols-2 gap-[16px]">
 
-        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px; display:flex; gap:20px;">
-          <pre style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.15; margin:0; color:var(--accent); flex:none;"> .----.
+        <div class="card bg-card border border-line rounded-[3px] p-[24px] flex gap-[20px]">
+          <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.
  |o  o|
  | -- |
  '----'</pre>
           <div>
-            <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;"><h3 style="margin:0; font-size:19px; font-weight:800;">Mentor</h3><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); border:1px solid var(--line2); padding:2px 7px; border-radius:99px; white-space:nowrap;">early access soon</span></div>
-            <p style="margin:0; font-size:14px; line-height:1.6; color:var(--body);">AI mock-interview simulator. Parses job descriptions, generates role-specific questions, and scores answers in real time — competency breakdowns and hire-probability.</p>
+            <div class="flex items-center gap-[10px] mb-[7px]"><h3 class="m-0 text-[19px] font-extrabold">Mentor</h3><span class="font-mono text-[10px] text-muted border border-line2 px-[7px] py-[2px] rounded-[99px] whitespace-nowrap">early access soon</span></div>
+            <p class="m-0 text-[14px] leading-[1.6] text-body">AI mock-interview simulator. Parses job descriptions, generates role-specific questions, and scores answers in real time — competency breakdowns and hire-probability.</p>
           </div>
         </div>
 
-        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px; display:flex; gap:20px;">
-          <pre style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.15; margin:0; color:var(--accent); flex:none;"> .----.
+        <div class="card bg-card border border-line rounded-[3px] p-[24px] flex gap-[20px]">
+          <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.
  |&gt;_  |
  |≡≡≡ |
  '----'</pre>
           <div>
-            <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;"><h3 style="margin:0; font-size:19px; font-weight:800;">Stencil</h3><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--accent); border:1px solid var(--accent); padding:2px 7px; border-radius:99px; white-space:nowrap;">open source</span></div>
-            <p style="margin:0 0 8px; font-size:14px; line-height:1.6; color:var(--body);">VS Code extension that organizes, searches, and injects reusable AI prompts — with IDE context — into Copilot, Claude or any chat, without leaving your editor.</p>
-            <a href="https://github.com/ozrabal/stencil" target="_blank" rel="noopener noreferrer" class="link-accent" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink); text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:3px;">github.com/ozrabal/stencil ↗</a>
+            <div class="flex items-center gap-[10px] mb-[7px]"><h3 class="m-0 text-[19px] font-extrabold">Stencil</h3><span class="font-mono text-[10px] text-accent border border-accent px-[7px] py-[2px] rounded-[99px] whitespace-nowrap">open source</span></div>
+            <p class="mt-0 mx-0 mb-[8px] text-[14px] leading-[1.6] text-body">VS Code extension that organizes, searches, and injects reusable AI prompts — with IDE context — into Copilot, Claude or any chat, without leaving your editor.</p>
+            <a href="https://github.com/ozrabal/stencil" target="_blank" rel="noopener noreferrer" class="link-accent font-mono text-[12px] text-ink underline decoration-accent underline-offset-[3px]">github.com/ozrabal/stencil ↗</a>
           </div>
         </div>
 
-        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px; display:flex; gap:20px;">
-          <pre style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.15; margin:0; color:var(--accent); flex:none;"> .----.
+        <div class="card bg-card border border-line rounded-[3px] p-[24px] flex gap-[20px]">
+          <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.
  |▤▤▤ |
  |▤▤▤ |
  '----'</pre>
           <div>
-            <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;"><h3 style="margin:0; font-size:19px; font-weight:800;">Muninn</h3><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); border:1px solid var(--line2); padding:2px 7px; border-radius:99px; white-space:nowrap;">early access soon</span></div>
-            <p style="margin:0; font-size:14px; line-height:1.6; color:var(--body);">Local-first Markdown library manager. Watches folders, classifies files with on-device embeddings, and builds a searchable private vault — zero cloud, zero manual tagging.</p>
+            <div class="flex items-center gap-[10px] mb-[7px]"><h3 class="m-0 text-[19px] font-extrabold">Muninn</h3><span class="font-mono text-[10px] text-muted border border-line2 px-[7px] py-[2px] rounded-[99px] whitespace-nowrap">early access soon</span></div>
+            <p class="m-0 text-[14px] leading-[1.6] text-body">Local-first Markdown library manager. Watches folders, classifies files with on-device embeddings, and builds a searchable private vault — zero cloud, zero manual tagging.</p>
           </div>
         </div>
 
-        <div class="card" style="background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px; display:flex; gap:20px;">
-          <pre style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.15; margin:0; color:var(--accent); flex:none;"> .----.
+        <div class="card bg-card border border-line rounded-[3px] p-[24px] flex gap-[20px]">
+          <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.
  |┌┐  |
  | └┘ |
  '----'</pre>
           <div>
-            <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;"><h3 style="margin:0; font-size:19px; font-weight:800;">PlanMyApp</h3><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); border:1px solid var(--line2); padding:2px 7px; border-radius:99px; white-space:nowrap;">early access soon</span></div>
-            <p style="margin:0; font-size:14px; line-height:1.6; color:var(--body);">Planning tool for applications. Outline, design, and strategize app ideas efficiently with AI-powered insights and recommendations.</p>
+            <div class="flex items-center gap-[10px] mb-[7px]"><h3 class="m-0 text-[19px] font-extrabold">PlanMyApp</h3><span class="font-mono text-[10px] text-muted border border-line2 px-[7px] py-[2px] rounded-[99px] whitespace-nowrap">early access soon</span></div>
+            <p class="m-0 text-[14px] leading-[1.6] text-body">Planning tool for applications. Outline, design, and strategize app ideas efficiently with AI-powered insights and recommendations.</p>
           </div>
         </div>
 
       </div>
-      <div style="margin-top:16px; border:1px dashed var(--line2); border-radius:3px; padding:18px 24px; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:12px;">
-        <span style="color:var(--accent);">&gt;</span> more revolutionary ideas coming soon<span style="display:inline-block; width:8px; height:15px; background:var(--muted); animation:blink 1.1s step-end infinite;"></span>
+      <div class="mt-[16px] border border-dashed border-line2 rounded-[3px] px-[24px] py-[18px] font-mono text-[13px] text-muted flex items-center gap-[12px]">
+        <span class="text-accent">&gt;</span> more revolutionary ideas coming soon<span class="inline-block w-[8px] h-[15px] bg-muted animate-[blink_1.1s_step-end_infinite]"></span>
       </div>
     </section>
 
-    <div style="height:64px;"></div>
+    <div class="h-[64px]"></div>
   </div>
 
   <!-- home behaviour: role typing + neural-net canvas -->

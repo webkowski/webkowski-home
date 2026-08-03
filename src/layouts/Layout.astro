@@ -25,7 +25,6 @@ const { title } = Astro.props;
     ">
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -48,7 +47,7 @@ const { title } = Astro.props;
     </script>
   </head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8J7EG49QGS"></script>
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8J7EG49QGS"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -56,31 +55,31 @@ const { title } = Astro.props;
     gtag('config', 'G-8J7EG49QGS');
   </script>
   <body>
-    <div style="position:relative; min-height:100vh; overflow-x:hidden; background:var(--bg); color:var(--ink); transition:background-color .3s ease, color .3s ease;">
+    <div class="relative min-h-screen overflow-x-hidden bg-bg text-ink transition-colors duration-300 ease-[ease]">
 
       <!-- fixed corner brackets -->
-      <div style="position:fixed; top:10px; left:12px; font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--bracket); z-index:5; pointer-events:none;">┌</div>
-      <div style="position:fixed; top:10px; right:12px; font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--bracket); z-index:5; pointer-events:none;">┐</div>
-      <div style="position:fixed; bottom:10px; left:12px; font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--bracket); z-index:5; pointer-events:none;">└</div>
-      <div style="position:fixed; bottom:10px; right:12px; font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--bracket); z-index:5; pointer-events:none;">┘</div>
+      <div class="fixed top-2.5 left-3 font-mono text-[15px] text-bracket z-5 pointer-events-none">┌</div>
+      <div class="fixed top-2.5 right-3 font-mono text-[15px] text-bracket z-5 pointer-events-none">┐</div>
+      <div class="fixed bottom-2.5 left-3 font-mono text-[15px] text-bracket z-5 pointer-events-none">└</div>
+      <div class="fixed bottom-2.5 right-3 font-mono text-[15px] text-bracket z-5 pointer-events-none">┘</div>
 
       <!-- NAV -->
-      <div style="position:sticky; top:0; z-index:20; background:var(--nav-bg); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);">
-        <div style="max-width:1080px; margin:0 auto; padding:14px 32px; display:flex; align-items:center; gap:24px;">
-          <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none; user-select:none;">
-            <span style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; color:var(--on-accent); background:var(--accent); padding:5px 8px; border-radius:3px; letter-spacing:1px;">pł</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted);">webkowski.com</span>
+      <div class="sticky top-0 z-20 bg-nav-bg backdrop-blur-[10px] border-b border-line">
+        <div class="max-w-[1080px] mx-auto px-[32px] py-[14px] flex items-center gap-[24px]">
+          <a href="/" class="flex items-center gap-[10px] no-underline select-none">
+            <span class="font-mono font-bold text-[13px] text-on-accent bg-accent px-[8px] py-[5px] rounded-[3px] tracking-[1px]">pł</span>
+            <span class="font-mono text-[13px] text-muted">webkowski.com</span>
           </a>
-          <div style="flex:1;"></div>
-          <div style="display:flex; align-items:center; gap:22px; font-family:'JetBrains Mono',monospace; font-size:13px;">
-            <a href="/" class="nav-link" data-text="home" style="text-decoration:none;">home</a>
-            <a href="/#services" class="nav-link" data-text="work" style="text-decoration:none;">work</a>
-            <a href="/projects" class="nav-link" data-text="projects" style="text-decoration:none;">projects</a>
-            <a href="#contact" class="nav-link" data-text="contact" style="text-decoration:none;">contact</a>
-            <span id="theme-toggle" class="nav-link" style="color:var(--muted);"><span id="theme-label">☾ dark</span></span>
+          <div class="flex-1"></div>
+          <div class="flex items-center gap-[22px] font-mono text-[13px]">
+            <a href="/" class="nav-link no-underline" data-text="home">home</a>
+            <a href="/#services" class="nav-link no-underline" data-text="work">work</a>
+            <a href="/projects" class="nav-link no-underline" data-text="projects">projects</a>
+            <a href="#contact" class="nav-link no-underline" data-text="contact">contact</a>
+            <span id="theme-toggle" class="nav-link text-muted"><span id="theme-label">☾ dark</span></span>
           </div>
-          <div style="display:flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted); border-left:1px solid var(--line); padding-left:18px;">
-            <span style="width:7px; height:7px; border-radius:50%; background:var(--accent); animation:pulse 1.8s ease-in-out infinite;"></span>
+          <div class="flex items-center gap-[8px] font-mono text-[12px] text-muted border-l border-line pl-[18px]">
+            <span class="w-[7px] h-[7px] rounded-full bg-green-500 animate-[pulse_1.8s_ease-in-out_infinite]"></span>
             <span>Available</span>
           </div>
         </div>
@@ -89,17 +88,17 @@ const { title } = Astro.props;
       <slot />
 
       <!-- CONTACT (dark band, shared) -->
-      <div id="contact" style="background:var(--contact-bg); color:var(--contact-text); margin-top:20px;">
-        <div style="max-width:1080px; margin:0 auto; padding:72px 32px 40px;">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-bottom:22px;">// let's build something</div>
-          <h2 data-text="let's talk." style="font-size:clamp(38px,7vw,80px); font-weight:900; letter-spacing:-2px; margin:0 0 30px; line-height:.95;">let's talk.</h2>
-          <a href="mailto:ozrabal+www@gmail.com" class="email-btn" style="display:inline-block; background:var(--accent); color:var(--on-accent); padding:15px 26px; border-radius:3px; font-family:'JetBrains Mono',monospace; font-size:14px; text-decoration:none;">ozrabal+www@gmail.com →</a>
-          <div style="display:flex; flex-wrap:wrap; gap:26px; margin-top:38px; font-family:'JetBrains Mono',monospace; font-size:13px;">
-            <a href="https://www.linkedin.com/in/lepkowski" target="_blank" rel="noopener noreferrer" class="link-accent" style="color:var(--contact-muted); text-decoration:none;">linkedin ↗</a>
-            <a href="https://github.com/ozrabal" target="_blank" rel="noopener noreferrer" class="link-accent" style="color:var(--contact-muted); text-decoration:none;">github ↗</a>
-            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent" style="color:var(--contact-muted); text-decoration:none;">photography ↗</a>
+      <div id="contact" class="bg-contact-bg text-contact-text mt-[20px]">
+        <div class="max-w-[1080px] mx-auto pt-[72px] px-[32px] pb-[40px]">
+          <div class="font-mono text-[12px] text-accent mb-[22px]">// let's build something</div>
+          <h2 data-text="let's talk." class="text-[clamp(38px,7vw,80px)] font-black tracking-[-2px] mt-0 mx-0 mb-[30px] leading-[.95]">let's talk.</h2>
+          <a href="mailto:ozrabal+www@gmail.com" class="email-btn inline-block bg-accent text-on-accent px-[26px] py-[15px] rounded-[3px] font-mono text-[14px] no-underline">ozrabal+www@gmail.com →</a>
+          <div class="flex flex-wrap gap-[26px] mt-[38px] font-mono text-[13px]">
+            <a href="https://www.linkedin.com/in/lepkowski" target="_blank" rel="noopener noreferrer" class="link-accent text-contact-muted no-underline">linkedin ↗</a>
+            <a href="https://github.com/ozrabal" target="_blank" rel="noopener noreferrer" class="link-accent text-contact-muted no-underline">github ↗</a>
+            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent text-contact-muted no-underline">photography ↗</a>
           </div>
-          <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-top:54px; padding-top:22px; border-top:1px solid var(--contact-line); font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--contact-dim);">
+          <div class="flex flex-wrap items-center justify-between gap-[16px] mt-[54px] pt-[22px] border-t border-contact-line font-mono text-[11.5px] text-contact-dim">
             <span>© 2026 Piotr Łepkowski · software engineer</span>
             <span>this site uses cookies</span>
           </div>
@@ -133,7 +132,8 @@ const { title } = Astro.props;
         if (mq) {
           var onChange = function () { if (!stored()) apply(mq.matches ? 'dark' : 'light'); };
           if (mq.addEventListener) mq.addEventListener('change', onChange);
-          else if (mq.addListener) mq.addListener(onChange);
+          // legacy Safari <14 fallback: reach the deprecated addListener via an untyped alias
+          else { var legacyMq = /** @type {any} */ (mq); if (legacyMq.addListener) legacyMq.addListener(onChange); }
         }
 
         // scramble-on-hover

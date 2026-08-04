@@ -65,21 +65,21 @@ const { title } = Astro.props;
 
       <!-- NAV -->
       <div class="sticky top-0 z-20 bg-nav-bg backdrop-blur-[10px] border-b border-line">
-        <div class="max-w-[1080px] mx-auto px-[32px] py-[14px] flex items-center gap-[24px]">
-          <a href="/" class="flex items-center gap-[10px] no-underline select-none">
-            <span class="font-mono font-bold text-[13px] text-on-accent bg-accent px-[8px] py-[5px] rounded-[3px] tracking-[1px]">pł</span>
+        <div class="max-w-7xl mx-auto px-8 py-3.5 flex items-center gap-6">
+          <a href="/" class="flex items-center gap-2.5 no-underline select-none">
+            <span class="font-mono font-bold text-[13px] text-on-accent bg-accent px-2 py-1.25 rounded-[3px] tracking-[1px]">pł</span>
             <span class="font-mono text-[13px] text-muted">webkowski.com</span>
           </a>
           <div class="flex-1"></div>
-          <div class="flex items-center gap-[22px] font-mono text-[13px]">
+          <div class="flex items-center gap-5.5 font-mono text-[13px]">
             <a href="/" class="nav-link no-underline" data-text="home">home</a>
             <a href="/#services" class="nav-link no-underline" data-text="work">work</a>
             <a href="/projects" class="nav-link no-underline" data-text="projects">projects</a>
             <a href="#contact" class="nav-link no-underline" data-text="contact">contact</a>
             <span id="theme-toggle" class="nav-link text-muted"><span id="theme-label">☾ dark</span></span>
           </div>
-          <div class="flex items-center gap-[8px] font-mono text-[12px] text-muted border-l border-line pl-[18px]">
-            <span class="w-[7px] h-[7px] rounded-full bg-green-500 animate-[pulse_1.8s_ease-in-out_infinite]"></span>
+          <div class="flex items-center gap-2 font-mono text-[12px] text-muted border-l border-line pl-4.5">
+            <span class="w-1.75 h-1.75 rounded-full bg-green-500 animate-[pulse_1.8s_ease-in-out_infinite]"></span>
             <span>Available</span>
           </div>
         </div>
@@ -88,17 +88,17 @@ const { title } = Astro.props;
       <slot />
 
       <!-- CONTACT (dark band, shared) -->
-      <div id="contact" class="bg-contact-bg text-contact-text mt-[20px]">
-        <div class="max-w-[1080px] mx-auto pt-[72px] px-[32px] pb-[40px]">
-          <div class="font-mono text-[12px] text-accent mb-[22px]">// let's build something</div>
-          <h2 data-text="let's talk." class="text-[clamp(38px,7vw,80px)] font-black tracking-[-2px] mt-0 mx-0 mb-[30px] leading-[.95]">let's talk.</h2>
-          <a href="mailto:ozrabal+www@gmail.com" class="email-btn inline-block bg-accent text-on-accent px-[26px] py-[15px] rounded-[3px] font-mono text-[14px] no-underline">ozrabal+www@gmail.com →</a>
-          <div class="flex flex-wrap gap-[26px] mt-[38px] font-mono text-[13px]">
+      <div id="contact" class="bg-contact-bg text-contact-text mt-5">
+        <div class="max-w-7xl mx-auto pt-18 px-8 pb-10">
+          <div class="font-mono text-[12px] text-accent mb-5.5">// let's build something</div>
+          <h2 data-text="let's talk." class="text-[clamp(38px,7vw,80px)] font-black tracking-[-2px] mt-0 mx-0 mb-7.5 leading-[.95]">let's talk.</h2>
+          <a href="mailto:ozrabal+www@gmail.com" class="email-btn inline-block bg-accent text-on-accent px-6.5 py-3.75 rounded-[3px] font-mono text-[14px] no-underline">ozrabal+www@gmail.com →</a>
+          <div class="flex flex-wrap gap-6.5 mt-9.5 font-mono text-[13px]">
             <a href="https://www.linkedin.com/in/lepkowski" target="_blank" rel="noopener noreferrer" class="link-accent text-contact-muted no-underline">linkedin ↗</a>
             <a href="https://github.com/ozrabal" target="_blank" rel="noopener noreferrer" class="link-accent text-contact-muted no-underline">github ↗</a>
             <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent text-contact-muted no-underline">photography ↗</a>
           </div>
-          <div class="flex flex-wrap items-center justify-between gap-[16px] mt-[54px] pt-[22px] border-t border-contact-line font-mono text-[11.5px] text-contact-dim">
+          <div class="flex flex-wrap items-center justify-between gap-4 mt-13.5 pt-5.5 border-t border-contact-line font-mono text-[11.5px] text-contact-dim">
             <span>© 2026 Piotr Łepkowski · software engineer</span>
             <span>this site uses cookies</span>
           </div>

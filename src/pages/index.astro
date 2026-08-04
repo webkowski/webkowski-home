@@ -2,25 +2,25 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="Piotr Łepkowski - Software Engineer">
-  <div id="top" class="max-w-[1080px] mx-auto px-[32px]">
+  <div id="top" class="max-w-7xl mx-auto px-8">
 
     <!-- HERO -->
-    <section class="pt-[58px] pb-[50px]">
-      <div class="flex flex-wrap gap-[18px] items-center">
-        <div class="flex-[1_1_360px] min-w-[330px]">
+    <section class="pt-14.5 pb-12.5">
+      <div class="flex flex-wrap gap-4.5 items-center">
+        <div class="flex-[1_1_360px] min-w-82.5">
           <div class="font-mono text-[14px] leading-[1.9] text-ink"><span class="text-accent">➜</span> <span class="text-muted">~</span> whoami</div>
-          <h1 class="font-sans font-extrabold text-[clamp(30px,4.2vw,50px)] leading-[.98] tracking-[-1.5px] mt-[6px] mx-0 mb-[4px] whitespace-nowrap">Piotr Łepkowski<span class="text-accent">.</span></h1>
-          <div class="font-mono text-[16px] text-accent min-h-[24px] mt-[6px] mx-0 mb-[20px]"><span id="role-text"></span><span class="inline-block w-[8px] h-[15px] bg-accent ml-[3px] translate-y-[2px] animate-[blink_1s_step-end_infinite]"></span></div>
-          <p class="max-w-[48ch] text-[16.5px] leading-[1.62] text-text mt-0 mx-0 mb-[28px]">Software developer with over 15 years of experience. Deep knowledge across the modern web stack and a proven track record of shipping successful products. Committed to high-quality, scalable software. Besides code, I take <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="text-ink underline decoration-accent underline-offset-[3px]">photos</a>.</p>
-          <div class="flex flex-wrap gap-[14px] font-mono text-[13px]">
-            <a href="/projects" class="btn-primary bg-accent text-on-accent border-none px-[22px] py-[13px] rounded-[3px] no-underline text-[13px]">see_projects →</a>
-            <a href="#contact" class="btn-ghost bg-transparent text-ink border border-line40 px-[22px] py-[13px] rounded-[3px] no-underline text-[13px]">let's_talk</a>
-            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent inline-flex items-center px-[4px] py-[13px] text-muted no-underline">photos ↗</a>
+          <h1 class="font-sans font-extrabold text-[clamp(30px,4.2vw,50px)] leading-[.98] tracking-[-1.5px] mt-1.5 mx-0 mb-1 whitespace-nowrap">Piotr Łepkowski<span class="text-accent">.</span></h1>
+          <div class="font-mono text-[16px] text-accent min-h-6 mt-1.5 mx-0 mb-5"><span id="role-text"></span><span class="inline-block w-2 h-3.75 bg-accent ml-0.75 translate-y-0.5 animate-[blink_1s_step-end_infinite]"></span></div>
+          <p class="max-w-[48ch] text-[16.5px] leading-[1.62] text-text mt-0 mx-0 mb-7">Senior Full-Stack Engineer with 15+ years of experience delivering scalable web applications, SaaS platforms and AI solutions. From architecture and technical planning to production-ready software.</p>
+          <div class="flex flex-wrap gap-3.5 font-mono text-[13px]">
+            <a href="/projects" class="btn-primary bg-accent text-on-accent border-none px-5.5 py-3.25 rounded-[3px] no-underline text-[13px]">see_projects →</a>
+            <a href="#contact" class="btn-ghost bg-transparent text-ink border border-line40 px-5.5 py-3.25 rounded-[3px] no-underline text-[13px]">let's_talk</a>
+            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent inline-flex items-center px-1 py-3.25 text-muted no-underline">photos ↗</a>
           </div>
         </div>
-        <div class="flex-[1.5_1_420px] min-w-[300px] flex flex-col items-stretch gap-[10px]">
+        <div class="flex-[1.5_1_420px] min-w-75 flex flex-col items-stretch gap-2.5">
           <canvas id="net-canvas" aria-hidden="true" class="w-full h-[clamp(240px,32vh,340px)]"></canvas>
-          <div id="net-stats" class="flex flex-wrap gap-[16px] font-mono text-[11px] text-muted">
+          <div id="net-stats" class="flex flex-wrap gap-4 font-mono text-[11px] text-muted">
             <span>epoch <span id="st-epoch" class="text-ink">0000</span></span>
             <span>loss <span id="st-loss" class="text-accent">0.0000</span></span>
             <span>acc <span id="st-acc" class="text-accent">0.0%</span></span>
@@ -31,106 +31,106 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="pt-[30px] pb-[18px]">
-      <div class="flex items-center gap-[16px] mb-[36px]">
+    <section id="services" class="pt-7.5 pb-4.5">
+      <div class="flex items-center gap-4 mb-9">
         <span class="font-mono text-[13px] text-accent font-bold">01</span>
-        <span data-text="you have an idea, I'll help you make it happen" class="font-mono text-[13px] tracking-[.5px] text-ink font-medium">you have an idea, I'll help you make it happen</span>
+        <span data-text="building software that scales" class="font-mono text-[13px] tracking-[.5px] text-ink font-medium">building software that scales</span>
         <span class="flex-1 h-px bg-line14"></span>
-        <span class="font-mono text-[12px] text-muted">04 services</span>
+        <span class="font-mono text-[12px] text-muted">services</span>
       </div>
-      <div class="grid grid-cols-2 gap-[16px]">
-        <div class="card bg-card border border-line rounded-[3px] p-[26px]">
-          <div class="font-mono text-[12px] text-accent mb-[14px]">[ 01 ]</div>
-          <h3 class="mt-0 mx-0 mb-[8px] text-[21px] font-bold tracking-[-.3px]">Web, SaaS &amp; Mobile Apps</h3>
-          <p class="m-0 text-[14.5px] leading-[1.6] text-body">Fast, scalable &amp; secure applications with modern architecture.</p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="card bg-card border border-line rounded-[3px] p-6.5">
+          <div class="font-mono text-[12px] text-accent mb-3.5">[ 01 ]</div>
+          <h3 class="mt-0 mx-0 mb-2 text-[21px] font-bold tracking-[-.3px]">Product Engineering</h3>
+          <p class="m-0 text-[14.5px] leading-[1.6] text-body">Designing and delivering scalable digital products from concept to production. Focused on maintainability, performance and long-term business value.</p>
         </div>
-        <div class="card bg-card border border-line rounded-[3px] p-[26px]">
-          <div class="font-mono text-[12px] text-accent mb-[14px]">[ 02 ]</div>
-          <h3 class="mt-0 mx-0 mb-[8px] text-[21px] font-bold tracking-[-.3px]">React / Next.js</h3>
-          <p class="m-0 text-[14.5px] leading-[1.6] text-body">UI/UX development, application architecture, data visualization, services integration.</p>
+        <div class="card bg-card border border-line rounded-[3px] p-6.5">
+          <div class="font-mono text-[12px] text-accent mb-3.5">[ 02 ]</div>
+          <h3 class="mt-0 mx-0 mb-2 text-[21px] font-bold tracking-[-.3px]">Full-Stack Engineering</h3>
+          <p class="m-0 text-[14.5px] leading-[1.6] text-body">Building modern applications with React, Next.js, TypeScript and Node.js. From intuitive user interfaces to scalable APIs, integrations and cloud-ready backend services.</p>
         </div>
-        <div class="card bg-card border border-line rounded-[3px] p-[26px]">
-          <div class="font-mono text-[12px] text-accent mb-[14px]">[ 03 ]</div>
-          <h3 class="mt-0 mx-0 mb-[8px] text-[21px] font-bold tracking-[-.3px]">Node.js</h3>
-          <p class="m-0 text-[14.5px] leading-[1.6] text-body">Web services, APIs, SDKs, third-party integrations.</p>
+        <div class="card bg-card border border-line rounded-[3px] p-6.5">
+          <div class="font-mono text-[12px] text-accent mb-3.5">[ 03 ]</div>
+          <h3 class="mt-0 mx-0 mb-2 text-[21px] font-bold tracking-[-.3px]">AI Engineering</h3>
+          <p class="m-0 text-[14.5px] leading-[1.6] text-body">Integrating LLMs, AI agents and intelligent automation into existing and new products. Turning AI capabilities into practical business solutions.</p>
         </div>
-        <div class="card bg-card border border-line rounded-[3px] p-[26px]">
-          <div class="font-mono text-[12px] text-accent mb-[14px]">[ 04 ]</div>
-          <h3 class="mt-0 mx-0 mb-[8px] text-[21px] font-bold tracking-[-.3px]">AI</h3>
-          <p class="m-0 text-[14.5px] leading-[1.6] text-body">LLM integrations, prompt engineering, agents, automation.</p>
+        <div class="card bg-card border border-line rounded-[3px] p-6.5">
+          <div class="font-mono text-[12px] text-accent mb-3.5">[ 04 ]</div>
+          <h3 class="mt-0 mx-0 mb-2 text-[21px] font-bold tracking-[-.3px]">Software Architecture</h3>
+          <p class="m-0 text-[14.5px] leading-[1.6] text-body">Designing robust software architecture, modernizing legacy systems, improving performance and helping teams make sound technical decisions.</p>
         </div>
       </div>
     </section>
 
     <!-- SIDE PROJECTS -->
-    <section id="side" class="pt-[54px] pb-[18px]">
-      <div class="flex items-center gap-[16px] mb-[36px]">
+    <section id="side" class="pt-13.5 pb-4.5">
+      <div class="flex items-center gap-4 mb-9">
         <span class="font-mono text-[13px] text-accent font-bold">02</span>
-        <span data-text="side_projects" class="font-mono text-[13px] tracking-[.5px] text-ink font-medium">side_projects</span>
+        <span data-text="side projects" class="font-mono text-[13px] tracking-[.5px] text-ink font-medium">side projects</span>
         <span class="flex-1 h-px bg-line14"></span>
         <span class="font-mono text-[12px] text-muted">building in public</span>
       </div>
-      <div class="grid grid-cols-2 gap-[16px]">
+      <div class="grid grid-cols-2 gap-4">
 
-        <div class="card bg-card border border-line rounded-[3px] p-[24px] flex gap-[20px]">
+        <div class="card bg-card border border-line rounded-[3px] p-6 flex gap-5">
           <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.
  |o  o|
  | -- |
  '----'</pre>
           <div>
-            <div class="flex items-center gap-[10px] mb-[7px]"><h3 class="m-0 text-[19px] font-extrabold">Mentor</h3><span class="font-mono text-[10px] text-muted border border-line2 px-[7px] py-[2px] rounded-[99px] whitespace-nowrap">early access soon</span></div>
+            <div class="flex items-center gap-2.5 mb-1.75"><h3 class="m-0 text-[19px] font-extrabold">Mentor</h3><span class="font-mono text-[10px] text-muted border border-line2 px-1.75 py-0.5 rounded-[99px] whitespace-nowrap">early access soon</span></div>
             <p class="m-0 text-[14px] leading-[1.6] text-body">AI mock-interview simulator. Parses job descriptions, generates role-specific questions, and scores answers in real time — competency breakdowns and hire-probability.</p>
           </div>
         </div>
 
-        <div class="card bg-card border border-line rounded-[3px] p-[24px] flex gap-[20px]">
+        <div class="card bg-card border border-line rounded-[3px] p-6 flex gap-5">
           <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.
  |&gt;_  |
  |≡≡≡ |
  '----'</pre>
           <div>
-            <div class="flex items-center gap-[10px] mb-[7px]"><h3 class="m-0 text-[19px] font-extrabold">Stencil</h3><span class="font-mono text-[10px] text-accent border border-accent px-[7px] py-[2px] rounded-[99px] whitespace-nowrap">open source</span></div>
-            <p class="mt-0 mx-0 mb-[8px] text-[14px] leading-[1.6] text-body">VS Code extension that organizes, searches, and injects reusable AI prompts — with IDE context — into Copilot, Claude or any chat, without leaving your editor.</p>
-            <a href="https://github.com/ozrabal/stencil" target="_blank" rel="noopener noreferrer" class="link-accent font-mono text-[12px] text-ink underline decoration-accent underline-offset-[3px]">github.com/ozrabal/stencil ↗</a>
+            <div class="flex items-center gap-2.5 mb-1.75"><h3 class="m-0 text-[19px] font-extrabold">Stencil</h3><span class="font-mono text-[10px] text-accent border border-accent px-1.75 py-0.5 rounded-[99px] whitespace-nowrap">open source</span></div>
+            <p class="mt-0 mx-0 mb-2 text-[14px] leading-[1.6] text-body">VS Code extension that organizes, searches, and injects reusable AI prompts — with IDE context — into Copilot, Claude or any chat, without leaving your editor.</p>
+            <a href="https://github.com/ozrabal/stencil" target="_blank" rel="noopener noreferrer" class="link-accent font-mono text-[12px] text-ink underline decoration-accent underline-offset-3">github.com/ozrabal/stencil ↗</a>
           </div>
         </div>
 
-        <div class="card bg-card border border-line rounded-[3px] p-[24px] flex gap-[20px]">
+        <div class="card bg-card border border-line rounded-[3px] p-6 flex gap-5">
           <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.
  |▤▤▤ |
  |▤▤▤ |
  '----'</pre>
           <div>
-            <div class="flex items-center gap-[10px] mb-[7px]"><h3 class="m-0 text-[19px] font-extrabold">Muninn</h3><span class="font-mono text-[10px] text-muted border border-line2 px-[7px] py-[2px] rounded-[99px] whitespace-nowrap">early access soon</span></div>
+            <div class="flex items-center gap-2.5 mb-1.75"><h3 class="m-0 text-[19px] font-extrabold">Muninn</h3><span class="font-mono text-[10px] text-muted border border-line2 px-1.75 py-0.5 rounded-[99px] whitespace-nowrap">early access soon</span></div>
             <p class="m-0 text-[14px] leading-[1.6] text-body">Local-first Markdown library manager. Watches folders, classifies files with on-device embeddings, and builds a searchable private vault — zero cloud, zero manual tagging.</p>
           </div>
         </div>
 
-        <div class="card bg-card border border-line rounded-[3px] p-[24px] flex gap-[20px]">
+        <div class="card bg-card border border-line rounded-[3px] p-6 flex gap-5">
           <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.
  |┌┐  |
  | └┘ |
  '----'</pre>
           <div>
-            <div class="flex items-center gap-[10px] mb-[7px]"><h3 class="m-0 text-[19px] font-extrabold">PlanMyApp</h3><span class="font-mono text-[10px] text-muted border border-line2 px-[7px] py-[2px] rounded-[99px] whitespace-nowrap">early access soon</span></div>
+            <div class="flex items-center gap-2.5 mb-1.75"><h3 class="m-0 text-[19px] font-extrabold">PlanMyApp</h3><span class="font-mono text-[10px] text-muted border border-line2 px-1.75 py-0.5 rounded-[99px] whitespace-nowrap">early access soon</span></div>
             <p class="m-0 text-[14px] leading-[1.6] text-body">Planning tool for applications. Outline, design, and strategize app ideas efficiently with AI-powered insights and recommendations.</p>
           </div>
         </div>
 
       </div>
-      <div class="mt-[16px] border border-dashed border-line2 rounded-[3px] px-[24px] py-[18px] font-mono text-[13px] text-muted flex items-center gap-[12px]">
-        <span class="text-accent">&gt;</span> more revolutionary ideas coming soon<span class="inline-block w-[8px] h-[15px] bg-muted animate-[blink_1.1s_step-end_infinite]"></span>
+      <div class="mt-4 border border-dashed border-line2 rounded-[3px] px-6 py-4.5 font-mono text-[13px] text-muted flex items-center gap-3">
+        <span class="text-accent">&gt;</span> more revolutionary ideas coming soon<span class="inline-block w-2 h-3.75 bg-muted animate-[blink_1.1s_step-end_infinite]"></span>
       </div>
     </section>
 
-    <div class="h-[64px]"></div>
+    <div class="h-16"></div>
   </div>
 
   <!-- home behaviour: role typing + neural-net canvas -->
   <script is:inline>
     (function () {
       // typed role
-      var role = 'software engineer · 15+ years';
+      var role = 'software engineer · POZ · Poland';
       var roleEl = document.getElementById('role-text');
       var ri = 0;
       setInterval(function () {

@@ -15,10 +15,10 @@ import Layout from "../layouts/Layout.astro";
           <div class="flex flex-wrap gap-3.5 font-mono text-[13px]">
             <a href="/projects" class="btn-primary bg-accent text-on-accent border-none px-5.5 py-3.25 rounded-[3px] no-underline text-[13px]">see_projects →</a>
             <a href="#contact" class="btn-ghost bg-transparent text-ink border border-line40 px-5.5 py-3.25 rounded-[3px] no-underline text-[13px]">let's_talk</a>
-            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent inline-flex items-center px-1 py-3.25 text-muted no-underline">photos ↗</a>
+            <a href="https://subiektywny.com" target="_blank" rel="noopener noreferrer" class="link-accent inline-flex items-center px-1 py-3.25 text-muted no-underline max-md:hidden">photos ↗</a>
           </div>
         </div>
-        <div class="flex-[1.5_1_420px] min-w-75 flex flex-col items-stretch gap-2.5">
+        <div class="flex-[1.5_1_420px] min-w-75 flex flex-col items-stretch gap-2.5 max-md:hidden">
           <canvas id="net-canvas" aria-hidden="true" class="w-full h-[clamp(240px,32vh,340px)]"></canvas>
           <div id="net-stats" class="flex flex-wrap gap-4 font-mono text-[11px] text-muted">
             <span>epoch <span id="st-epoch" class="text-ink">0000</span></span>
@@ -38,7 +38,7 @@ import Layout from "../layouts/Layout.astro";
         <span class="flex-1 h-px bg-line14"></span>
         <span class="font-mono text-[12px] text-muted">services</span>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid md:grid-cols-2 gap-4">
         <div class="card bg-card border border-line rounded-[3px] p-6.5">
           <div class="font-mono text-[12px] text-accent mb-3.5">[ 01 ]</div>
           <h3 class="mt-0 mx-0 mb-2 text-[21px] font-bold tracking-[-.3px]">Product Engineering</h3>
@@ -63,14 +63,14 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- SIDE PROJECTS -->
-    <section id="side" class="pt-13.5 pb-4.5">
+    <section id="side" class="pt-13.5 md:pb-4.5">
       <div class="flex items-center gap-4 mb-9">
         <span class="font-mono text-[13px] text-accent font-bold">02</span>
         <span data-text="side projects" class="font-mono text-[13px] tracking-[.5px] text-ink font-medium">side projects</span>
         <span class="flex-1 h-px bg-line14"></span>
         <span class="font-mono text-[12px] text-muted">building in public</span>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="flex flex-col md:grid md:grid-cols-2 gap-4">
 
         <div class="card bg-card border border-line rounded-[3px] p-6 flex gap-5">
           <pre class="font-mono text-[11px] leading-[1.15] m-0 text-accent flex-none"> .----.

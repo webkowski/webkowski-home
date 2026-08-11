@@ -15,14 +15,16 @@ import Layout from "../layouts/Layout.astro";
       <div class="acc-item open border-t border-line14">
         <div class="acc-head flex items-start gap-5 px-1 py-6 cursor-pointer">
           <span class="font-mono text-[13px] text-accent font-bold pt-1.5">01</span>
-          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Web Application for Trend Prediction Data Analysis</h2>
+          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">EV Charge-Point Management Platform</h2>
           <span class="acc-sign font-mono text-[22px] text-accent w-6 text-center"></span>
         </div>
         <div class="acc-body">
           <ul class="mt-0 mx-0 mb-6 pt-0 pr-1 pb-0 pl-12 list-none flex flex-col gap-3">
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>User-centric interface for efficient data analysis with interactive charts and visualizations to enhance user insight.</li>
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Co-devised a robust data-caching solution, significantly optimizing performance and reducing load times.</li>
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Worked with a multi-disciplinary team, ensuring cohesive development aligned with user needs.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Backend engineer and architect of a multi-tenant B2B SaaS for EV charging operators — charge-point management, roaming and billing.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Architected database-per-tenant isolation on NestJS, Drizzle and PostgreSQL serving 50+ operator tenants and 5,000+ charge points, with tooling applying schema migrations across every tenant.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Built a decimal-precise financial engine settling 100k+ charging transactions monthly across 33 modules, eliminating floating-point drift in tariffs, fees and earnings reconciliation.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Delivered REST endpoints across 145 controllers on serverless AWS Lambda with Cognito auth, RBAC guards and Jest suites.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Integrated open charge-point telemetry and roaming protocols (OCPP, OCPI) plus automated regulatory reporting and payment-gateway billing across 5,000+ connectors.</li>
           </ul>
         </div>
       </div>
@@ -30,14 +32,15 @@ import Layout from "../layouts/Layout.astro";
       <div class="acc-item border-t border-line14">
         <div class="acc-head flex items-start gap-5 px-1 py-6 cursor-pointer">
           <span class="font-mono text-[13px] text-accent font-bold pt-1.5">02</span>
-          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Investment Strategy Optimization Platform for Real Estate Investors</h2>
+          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Legacy-to-Cloud Data Migration Service</h2>
           <span class="acc-sign font-mono text-[22px] text-accent w-6 text-center"></span>
         </div>
         <div class="acc-body">
           <ul class="mt-0 mx-0 mb-6 pt-0 pr-1 pb-0 pl-12 list-none flex flex-col gap-3">
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Orchestrated the design and implementation of a UI ensuring clear, impactful data presentation.</li>
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Integrated intricate map views providing intuitive, location-based investment insights.</li>
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Ensured seamless integration with a backend delivering raw data; pivotal in shaping user experience.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Sole architect of a standalone service moving 20 B2B tenants off a legacy MySQL system onto per-tenant PostgreSQL in the cloud — ~3M transaction rows and up to 200k accounts per tenant.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Cut per-tenant migration runtime from ~12 hours to ~1 hour through chunked streaming reads, batched inserts and targeted indexing on both engines.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Engineered schema-drift guards that introspect INFORMATION_SCHEMA before each run, absorbing per-tenant differences across 20 legacy databases.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Shipped resumable, idempotent jobs across 20 ordered domain modules with S3 audit trails — ~150 production migrations with zero rollbacks.</li>
           </ul>
         </div>
       </div>
@@ -45,29 +48,83 @@ import Layout from "../layouts/Layout.astro";
       <div class="acc-item border-t border-line14">
         <div class="acc-head flex items-start gap-5 px-1 py-6 cursor-pointer">
           <span class="font-mono text-[13px] text-accent font-bold pt-1.5">03</span>
-          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Real-Time Synchronized Multiplatform Task Management Application</h2>
+          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Parametric CAD Product Configurator</h2>
           <span class="acc-sign font-mono text-[22px] text-accent w-6 text-center"></span>
         </div>
         <div class="acc-body">
           <ul class="mt-0 mx-0 mb-6 pt-0 pr-1 pb-0 pl-12 list-none flex flex-col gap-3">
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Led development of a backend platform ensuring synchronized task management across web, desktop, and mobile.</li>
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Built applications for each platform ensuring seamless inter-platform interoperability.</li>
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Managed integration with external platforms for enhanced functionality and data consistency.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>B2B configurator for an industrial manufacturer, embedded in a global e-commerce system across 17 locales; owned the CAD and 3D pipeline end to end in a 6-engineer team.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Automated CAD model delivery with JSCAD and Next.js server actions, cutting turnaround from 1–4 days of manual drafting to 5–10 seconds.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Engineered a deterministic parameter-keyed STL cache serving ~70% of requests straight from disk.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Built save-and-share configurations on Prisma and PostgreSQL plus a three-stage checkout, replacing emailed CAD attachments with a single retrievable URL.</li>
           </ul>
         </div>
       </div>
       <!-- 04 -->
-      <div class="acc-item border-t border-b border-line14">
+      <div class="acc-item border-t border-line14">
         <div class="acc-head flex items-start gap-5 px-1 py-6 cursor-pointer">
           <span class="font-mono text-[13px] text-accent font-bold pt-1.5">04</span>
-          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Rich interactive websites</h2>
+          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Consumer Travel-Tracking Mobile App</h2>
           <span class="acc-sign font-mono text-[22px] text-accent w-6 text-center"></span>
         </div>
         <div class="acc-body">
           <ul class="mt-0 mx-0 mb-6 pt-0 pr-1 pb-0 pl-12 list-none flex flex-col gap-3">
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>End-to-end website development using the latest technologies and current standards.</li>
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Stellar user experience through meticulous attention to detail and a user-centric approach.</li>
-            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Delivered efficient, visually appealing, functional digital solutions at the forefront of tech.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Tech lead on a ground-up React Native rewrite of a legacy Cordova app tracking travel milestones across 1,500+ regions worldwide.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Scaled the rewrite to 90,000+ downloads and 40,000+ registered users, lifting crash-free sessions from 98.7% to 99.6%.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Cut cold start from 4s to 1.25s on iOS and 9s to 4s on Android and shrank bundle size 22% via app bootstrap, Hermes and MMKV rework.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Engineered a real-time Mapbox GL layer with Turf.js point-in-polygon rendering 2,500+ locations at 60fps, plus offline-first sync supporting 7 days without a connection.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Led architecture and code review across 1,900+ commits, defining the Redux Toolkit, redux-saga and React Query conventions the team built every screen on.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 05 -->
+      <div class="acc-item border-t border-line14">
+        <div class="acc-head flex items-start gap-5 px-1 py-6 cursor-pointer">
+          <span class="font-mono text-[13px] text-accent font-bold pt-1.5">05</span>
+          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Real-Estate Investment Analytics Platform</h2>
+          <span class="acc-sign font-mono text-[22px] text-accent w-6 text-center"></span>
+        </div>
+        <div class="acc-body">
+          <ul class="mt-0 mx-0 mb-6 pt-0 pr-1 pb-0 pl-12 list-none flex flex-col gap-3">
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Sole engineer on a B2B SaaS for institutional investors — market scoring, portfolio underwriting and deal simulation — used by 10+ investment firms.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Owned a 58,000-line Next.js and React frontend alongside a serverless Koa API of 62 REST endpoints orchestrating 3 upstream data services.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Reduced production API latency from 1,000 ms to 35–50 ms (96% faster) through hot-path profiling, request batching and response caching on AWS Lambda.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Built a geospatial market-analysis interface with Mapbox GL and Turf.js clustering 1,500 ZIP-code areas per metro, letting analysts draw polygons and score markets in real time.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Virtualized 5,000-row portfolio tables into sub-second sorting, filtering and XLSX/CSV export, and productized a public data API with 25 endpoints and self-serve docs.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 06 -->
+      <div class="acc-item border-t border-line14">
+        <div class="acc-head flex items-start gap-5 px-1 py-6 cursor-pointer">
+          <span class="font-mono text-[13px] text-accent font-bold pt-1.5">06</span>
+          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">B2B Trend &amp; Signal Intelligence Platform</h2>
+          <span class="acc-sign font-mono text-[22px] text-accent w-6 text-center"></span>
+        </div>
+        <div class="acc-body">
+          <ul class="mt-0 mx-0 mb-6 pt-0 pr-1 pb-0 pl-12 list-none flex flex-col gap-3">
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Enterprise trend and signal intelligence platform for healthcare, FMCG and cosmetics brands.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Architected the migration from a single-tenant MVP to a multi-tenant Next.js and Node/Express platform with organization-scoped isolation on MongoDB, onboarding 5+ enterprise clients.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Engineered a Redis caching layer over MongoDB delivering 10x faster responses on endpoints querying a 2+ petabyte trend dataset.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Rebuilt the analytics dashboards in React with D3 and react-virtualized, cutting load from ~5s to under 1s and eliminating freezes on charts rendering thousands of data objects.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Integrated OpenAI GPT to auto-summarize signals and automated ingestion of news, clinical-trial, social and market data feeding 90 million microtrends into the projection pipeline.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 07 -->
+      <div class="acc-item border-t border-b border-line14">
+        <div class="acc-head flex items-start gap-5 px-1 py-6 cursor-pointer">
+          <span class="font-mono text-[13px] text-accent font-bold pt-1.5">07</span>
+          <h2 class="flex-1 m-0 text-[clamp(20px,2.6vw,28px)] font-bold tracking-[-.5px]">Cross-Platform Productivity SaaS</h2>
+          <span class="acc-sign font-mono text-[22px] text-accent w-6 text-center"></span>
+        </div>
+        <div class="acc-body">
+          <ul class="mt-0 mx-0 mb-6 pt-0 pr-1 pb-0 pl-12 list-none flex flex-col gap-3">
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Encrypted, offline-first task-management SaaS across desktop, iOS and Android — built solo end to end, reaching 1,000 users with ~100 paying subscribers.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Designed the offline-first sync architecture behind all 3 clients: per-user CouchDB replicated to local PouchDB with AES-encrypted storage, fully functional with zero connectivity.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Engineered a bidirectional integration engine syncing third-party task services via webhooks, change feeds and Bull queues, with Redis revision locking that eliminated replication loops.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Built the Koa backend from scratch with 44 REST endpoints, JWT auth and end-to-end Stripe billing — checkout, webhooks, trials, coupons, referrals.</li>
+            <li class="relative text-[15.5px] leading-[1.6] text-text2 pl-5"><span class="absolute left-0 text-accent font-mono">—</span>Shipped a 53-component Electron and Vue.js app with code-signed, notarized macOS and Windows auto-updates, plus a React Native client with SQLite-backed offline sync.</li>
           </ul>
         </div>
       </div>
@@ -79,42 +136,56 @@ import Layout from "../layouts/Layout.astro";
         <span class="font-mono text-[13px] text-accent font-bold">//</span>
         <span data-text="tech_stack" class="font-mono text-[13px] tracking-[.5px] text-ink font-medium">tech_stack</span>
         <span class="flex-1 h-px bg-line14"></span>
-        <span class="font-mono text-[12px] text-muted">most used</span>
+        <span class="font-mono text-[12px] text-muted">shipped with</span>
       </div>
-      <div class="grid grid-cols-3 gap-7">
-        <div>
-          <div class="font-mono text-[12px] text-muted mb-3.5">languages</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">JavaScript</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">TypeScript</span>
-          </div>
-        </div>
-        <div>
-          <div class="font-mono text-[12px] text-muted mb-3.5">frameworks</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">React/Next.js</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Nest.js</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Koa</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">React Native</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Express</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Astro</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Remix</span>
-          </div>
-        </div>
-        <div>
-          <div class="font-mono text-[12px] text-muted mb-3.5">libraries / apis</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">OpenAI</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">D3.js</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Mapbox</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Okta</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Node.js</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Prisma</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Electron</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Supabase</span>
-            <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">TailwindCSS</span>
-          </div>
-        </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-sm">TypeScript</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">JavaScript</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Node.js</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">SQL</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">iOS / Android</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">NestJS</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Next.js</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">React</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">React Native</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Express</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Koa</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Electron</span>
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Astro</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">PostgreSQL</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">MongoDB</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">MySQL</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Redis</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">CouchDB</span>
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Drizzle</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Prisma</span>
+
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">AWS</span>
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Cognito</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Serverless Framework</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Docker</span>
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">TanStack Query</span>
+
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Mapbox GL</span>
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">D3.js</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Three.js</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">JSCAD</span>
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Hermes</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">OpenAI</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Stripe</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Okta</span>
+
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Socket.IO</span>
+        <span class="tag font-mono text-[12.5px] px-2.75 py-1.5 border border-line18 rounded-[3px]">Bull</span>
+
       </div>
     </section>
     <div class="h-16"></div>
